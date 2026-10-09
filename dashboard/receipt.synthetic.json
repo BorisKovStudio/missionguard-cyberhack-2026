@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic_lab",
+  "mission": {
+    "actor_id": "demo-human",
+    "audience": "missionguard-executor-v1",
+    "budget": {
+      "max_calls": 3,
+      "max_rows": 6
+    },
+    "connection_ref": "synthetic-fixed",
+    "environment": "synthetic_lab",
+    "expires_at": 1791572400,
+    "grants": [
+      {
+        "fields": [
+          "event_id",
+          "title",
+          "starts_at",
+          "source_url",
+          "updated_at"
+        ],
+        "max_rows_per_call": 3,
+        "operation": "events.list",
+        "resource_ids": [
+          "evt-ai",
+          "evt-security",
+          "evt-design"
+        ]
+      },
+      {
+        "fields": [
+          "event_id",
+          "title",
+          "starts_at",
+          "source_url",
+          "updated_at"
+        ],
+        "max_rows_per_call": 1,
+        "operation": "events.get",
+        "resource_ids": [
+          "evt-ai",
+          "evt-security",
+          "evt-design"
+        ]
+      },
+      {
+        "fields": [
+          "event_id",
+          "summary",
+          "topics",
+          "source_url",
+          "updated_at"
+        ],
+        "max_rows_per_call": 1,
+        "operation": "analyses.get",
+        "resource_ids": [
+          "evt-ai",
+          "evt-security"
+        ]
+      }
+    ],
+    "mission_id": "demo-mission",
+    "org_id": "demo-org",
+    "purpose": "Select relevant AI security events from existing records, with evidence and unknowns.",
+    "registry_version": "1.0",
+    "schema_version": "1.0"
+  },
+  "contract_hash": "2575b13abca2d0a649781dd459fa926a0ce3d845fe4e231b56b8c3a0b1a86840",
+  "budget": {
+    "calls_used": 2,
+    "calls_limit": 3,
+    "rows_reserved": 4,
+    "rows_limit": 6
+  },
+  "revoked": false,
+  "executions": [
+    {
+      "execution_id": "71fb5672-d49c-41f8-9f18-aa096f0f3cf7",
+      "operation": "events.list",
+      "status": "allowed",
+      "reason": "ok",
+      "replayed": false,
+      "result": {
+        "fetched_at": 1791568800,
+        "rows": [
+          {
+            "event_id": "evt-ai",
+            "source_url": "https://example.invalid/synthetic/ai",
+            "title": "Synthetic AI Agent Security Workshop"
+          },
+          {
+            "event_id": "evt-security",
+            "source_url": "https://example.invalid/synthetic/security",
+            "title": "Synthetic Defensive Systems Meetup"
+          },
+          {
+            "event_id": "evt-design",
+            "source_url": null,
+            "title": "Synthetic Product Design Roundtable"
+          }
+        ],
+        "source": "synthetic_fixture"
+      },
+      "created_at": 1791568800
+    },
+    {
+      "execution_id": "93695e9a-64a4-41b6-80fc-a0cce2849b22",
+      "operation": "analyses.get",
+      "status": "allowed",
+      "reason": "ok",
+      "replayed": false,
+      "result": {
+        "fetched_at": 1791568800,
+        "rows": [
+          {
+            "event_id": "evt-ai",
+            "summary": "Synthetic existing analysis: practical agent security; good relevance for the stated goal. Attendance and pricing are unknown.",
+            "topics": [
+              "AI agents",
+              "security"
+            ]
+          }
+        ],
+        "source": "synthetic_fixture"
+      },
+      "created_at": 1791568800
+    }
+  ],
+  "audit_events": [
+    {
+      "calls_used": 1,
+      "event_id": "8af31a03-922a-44c1-b18f-41899f47d46f",
+      "event_type": "admitted",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "events.list",
+      "reason": "pending",
+      "rows_reserved": 3,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    },
+    {
+      "calls_used": 1,
+      "event_id": "12343900-25df-460a-83fd-b7ccb6d76ef8",
+      "event_type": "completed",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "events.list",
+      "reason": "ok",
+      "rows_reserved": 3,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    },
+    {
+      "calls_used": 1,
+      "event_id": "7d4c2bf0-f018-49bd-b3ec-5aae462c1cd7",
+      "event_type": "replayed",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "events.list",
+      "reason": "ok",
+      "rows_reserved": 3,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    },
+    {
+      "calls_used": 1,
+      "event_id": "d8cf031f-ee79-478c-93f3-013caa77cbe1",
+      "event_type": "denied",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "events.list",
+      "reason": "resource_denied",
+      "rows_reserved": 3,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    },
+    {
+      "calls_used": 2,
+      "event_id": "e6011e79-80a0-444b-b7fb-228f511b6e50",
+      "event_type": "admitted",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "analyses.get",
+      "reason": "pending",
+      "rows_reserved": 4,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    },
+    {
+      "calls_used": 2,
+      "event_id": "e4d8459e-2891-4e72-aea7-2017c9ff7ab6",
+      "event_type": "completed",
+      "latency_ms": 0,
+      "mission_alias": "m_a7e1f05a617249d2b2ae72e3a7eb6d45",
+      "mode": "synthetic_lab",
+      "operation": "analyses.get",
+      "reason": "ok",
+      "rows_reserved": 4,
+      "schema_version": "1.0",
+      "timestamp": 1791568800
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture, not live EventMatch evidence.",
+    "Live contract/auth/identity/bounds have not been verified.",
+    "Sponsor runtimes, open-web and Akash eligibility are unverified.",
+    "CLI Principal is trusted local test context, not production authentication.",
+    "Revoke stops new admissions, not previously admitted in-flight work."
+  ]
+}

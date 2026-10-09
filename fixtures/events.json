@@ -1,0 +1,5 @@
+[
+  {"event_id": "evt-ai", "title": "Synthetic AI Agent Security Workshop", "starts_at": "2026-10-12T18:00:00Z", "source_url": "https://example.invalid/synthetic/ai", "updated_at": 1791568800},
+  {"event_id": "evt-security", "title": "Synthetic Defensive Systems Meetup", "starts_at": "2026-10-13T19:00:00Z", "source_url": "https://example.invalid/synthetic/security", "updated_at": 1791568800},
+  {"event_id": "evt-design", "title": "Synthetic Product Design Roundtable", "starts_at": null, "source_url": null, "updated_at": 1791568800}
+]

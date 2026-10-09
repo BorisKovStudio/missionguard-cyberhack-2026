@@ -1,0 +1,4 @@
+[
+  {"event_id": "evt-ai", "summary": "Synthetic existing analysis: practical agent security; good relevance for the stated goal. Attendance and pricing are unknown.", "topics": ["AI agents", "security"], "source_url": "https://example.invalid/synthetic/ai", "updated_at": 1791568800},
+  {"event_id": "evt-security", "summary": "Synthetic existing analysis: defensive systems and operational controls. Speaker list is not available.", "topics": ["security", "operations"], "source_url": "https://example.invalid/synthetic/security", "updated_at": 1791568800}
+]

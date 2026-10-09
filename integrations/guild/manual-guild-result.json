@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "run_id": "97d66a4d-3f9e-4411-b2ab-fcfe400393c6",
+  "dataset": "synthetic",
+  "agent_runtime": "guild_hosted_coded",
+  "tool_runtime": "local_core_http",
+  "requested_model": "gpt-4o-2024-08-06",
+  "application_llm_calls": 1,
+  "output": "The MissionGuard synthetic execution involved a local tool runtime performing an \"events.list\" operation. This operation was allowed, resulting in the retrieval of three rows of business records from the dataset labeled as synthetic. These included details about a Synthetic AI Agent Security Workshop, a Synthetic Defensive Systems Meetup, and a Synthetic Product Design Roundtable. The execution was documented under `execution_id` \"3ef44b44-4949-4bc9-9919-c1f3a7a9f509\". The operation used 1 call from the available budget of 3 calls and reserved 3 rows out of a limit of 6. A denial for additional dispatches occurred due to \"resource_denied\". Evidence IDs related to this operation include \"216e31c6-b1a8-4fa2-85aa-6e29974229c0\", \"7aee92c5-b6ca-4a5b-86b5-f5611747fc2a\", \"cdd4f154-e7da-4d7b-ac5f-90c42b42a466\", and \"7f1f3269-9ede-4a9c-bed5-be5e5993d761\". No hosted remote tools or additional systems were claimed to be executed.",
+  "trigger": "manual_guild_test_ui",
+  "fresh_per_click": false,
+  "source_timestamp": "2026-10-09T22:57:52.434639+00:00",
+  "core_observed_at": "2026-10-09T22:40:44.369633+00:00",
+  "evidence_sha256": "6ccdaca0298089fd39a4a7afd2040480d87d487ff173b8bc66134417832c8eaa",
+  "usage": {
+    "input_tokens": 411,
+    "output_tokens": 267,
+    "total_tokens": 678,
+    "observed_llm_start_events": 1,
+    "observed_llm_done_events": 1
+  },
+  "cost": {
+    "estimated_usd": "0.0036975",
+    "billed_usd": null,
+    "basis": "published_model_list_price_not_verified_invoice"
+  },
+  "platform_internal_retries": "unverified_accepted_risk",
+  "retrieved_at": "2026-10-09T23:00:20.975874+00:00"
+}

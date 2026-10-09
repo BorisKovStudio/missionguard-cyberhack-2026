@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "mission_id": "demo-mission",
+  "purpose": "Select relevant AI security events from existing records, with evidence and unknowns.",
+  "actor_id": "demo-human",
+  "org_id": "demo-org",
+  "audience": "missionguard-executor-v1",
+  "environment": "synthetic_lab",
+  "connection_ref": "synthetic-fixed",
+  "registry_version": "1.0",
+  "expires_at": 1791572400,
+  "budget": {"max_calls": 3, "max_rows": 6},
+  "grants": [
+    {"operation": "events.list", "resource_ids": ["evt-ai", "evt-security", "evt-design"], "fields": ["event_id", "title", "starts_at", "source_url", "updated_at"], "max_rows_per_call": 3},
+    {"operation": "events.get", "resource_ids": ["evt-ai", "evt-security", "evt-design"], "fields": ["event_id", "title", "starts_at", "source_url", "updated_at"], "max_rows_per_call": 1},
+    {"operation": "analyses.get", "resource_ids": ["evt-ai", "evt-security"], "fields": ["event_id", "summary", "topics", "source_url", "updated_at"], "max_rows_per_call": 1}
+  ]
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Mission receipt · MissionGuard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+  <script type="module" src="run.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to mission receipt</a>
+  <aside class="rail" aria-label="MissionGuard workspace">
+    <a class="brand" href="#main"><svg aria-hidden="true" viewBox="0 0 32 36"><path d="M16 2 29 7v10c0 8-6 13-13 17C9 30 3 25 3 17V7Z"/><path d="m10 17 4 4 8-9"/></svg><span>Mission<span class="brand-light">Guard</span></span></a>
+    <p class="rail-label">SYNTHETIC DEMO</p>
+    <nav aria-label="Receipt sections">
+      <a class="nav-active" href="#main"><span aria-hidden="true">◈</span> Mission receipt</a>
+      <a href="#scope"><span aria-hidden="true">▤</span> Mission scope</a>
+      <a href="#trail"><span aria-hidden="true">⌁</span> Execution trail</a>
+      <a href="#limitations"><span aria-hidden="true">⊙</span> Integration gates</a>
+    </nav>
+    <div class="rail-bottom"><span class="local-dot" aria-hidden="true"></span> Hosted synthetic demo<p>No production authentication.<br>Akash synthetic API connected.</p><span class="version">INTERFACES / 1.0</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>Workspace <span aria-hidden="true">/</span> Mission receipt</span><span class="local-tag">HOSTED · SYNTHETIC DEMO</span></header>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><div><p class="eyebrow">BOUNDED AUTHORITY. VISIBLE EVIDENCE.</p><h1>Mission receipt<span class="title-dot">.</span></h1><p class="subheading">What was agreed, what happened, and what remains unknown.</p></div><button id="reload" class="button primary" type="button">Load local fixture <span aria-hidden="true">↗</span></button></div>
+      <section class="mode-bar" aria-label="Data mode and fixture state">
+        <div class="mode-options"><span class="mode-selected">Synthetic Lab</span><button type="button" disabled aria-describedby="live-gate">Live EventMatch <span class="small-badge">Not verified</span></button></div>
+        <div class="fixture-control"><label for="fixture-state">Fixture state</label><select id="fixture-state"><option value="receipt">Completed receipt</option><option value="preview">Approval preview</option><option value="unknown">Outcome unknown</option><option value="pending">Execution pending</option><option value="replay">Replay</option><option value="revoked">Revoked</option><option value="unavailable">Unavailable</option></select></div>
+      </section>
+      <p id="live-gate" class="gate-note">Live adapter contract, identity and bounds are unverified. No live controls are enabled.</p>
+      <section class="notice" aria-labelledby="run-heading">
+        <h2 id="run-heading">Run a real hosted synthetic mission</h2>
+        <p>Fixed policy synthetic-read-v1: 3 fictional event resources; read-only events.list/get and analyses.get grants; at most 3 calls / 6 rows reserved, 30-minute TTL. The fixed scenario performs one list read, identical-key replay and an out-of-scope block. One globally claimed run; persistent SQLite and durable restart-safe claim. No model call; Akash public fictional API only when operator-configured. Server policy is preconfigured; this is a public fictional demo, not production human authentication.</p>
+        <label><input id="confirm-run" type="checkbox"> I confirm this exact synthetic demo policy as demo consent, not authenticated sign-in.</label>
+        <p><button id="run-mission" class="button primary" type="button" disabled>Confirm policy &amp; Run synthetic mission</button> <button id="read-run" type="button" hidden>Read run result — no execution retry</button></p>
+        <p id="run-evidence" role="status" aria-live="polite">No current run. The receipt below is a saved synthetic fixture.</p>
+      </section>
+      <div id="notice" class="notice" role="status" aria-live="polite" aria-atomic="true">Loading local receipt…</div>
+      <section class="notice" aria-labelledby="manual-guild-heading">
+        <h2 id="manual-guild-heading">Separate manual Guild result</h2>
+        <p>Recorded private-draft Test UI run, not a fresh Dashboard execution. Guild hosted the model; Core tools were local. This does not change the mission receipt below.</p>
+        <button id="read-manual-guild" class="button" type="button">Read manual Guild result</button>
+        <p id="manual-guild-status" role="status" aria-live="polite">Not loaded. Reading this record makes no model, provider or Keychain calls.</p>
+        <p id="manual-guild-output"></p>
+      </section>
+      <section class="notice" aria-labelledby="clickhouse-probe-heading">
+        <h2 id="clickhouse-probe-heading">ClickHouse cloud probe — 3 rows verified</h2>
+        <p>Actual separately recorded synthetic probe: one INSERT acknowledgement and one SELECT verified 3 physical rows, 3 unique events and 0 invalid modes. ClickHouse stores sanitized audit events; it never authorizes tools.</p>
+        <p>Probe recorded <time datetime="2026-10-09T23:09:46.958917+00:00">Oct 9, 16:09:46 PDT</time>. Six reader settings independently verified <time datetime="2026-10-09T23:11:24.458234+00:00">Oct 9, 16:11:24 PDT</time>.</p>
+        <p><strong>Continuous ingestion is not connected. This probe is not correlated with this UI Run and is not fresh per click.</strong> The original reader_effective_settings_mismatch guard failure remains recorded and unresolved; the original guard did not pass.</p>
+        <details><summary>Recorded probe evidence</summary><p>Safe receipt: telemetry/receipts/clickhouse-probe.json. SHA256 e99fb06e873fb8ab9caaa8a07a5b0d4cf3e6edf71b06a8867b6efed4771ef52c. Readback counts passed before the original settings guard; independent settings verification does not erase that failure. No SQL, provider or credential call is made by this card.</p></details>
+      </section>
+      <section class="mission-header" aria-labelledby="purpose-heading"><div><p class="eyebrow">MISSION 01 <span id="mission-state" class="status-tag">Loading</span></p><h2 id="purpose-heading">Find relevant AI security events</h2><p id="purpose" class="muted">Waiting for receipt evidence.</p></div><div class="receipt-reference"><span>CONTRACT REFERENCE</span><code id="hash">—</code><span id="snapshot">No snapshot loaded</span></div></section>
+      <div class="content-grid">
+        <div class="primary-column">
+          <section id="results" class="results-section" aria-labelledby="results-heading"><div class="section-heading"><div><p class="eyebrow">USEFUL RESULT</p><h2 id="results-heading">Existing event records</h2></div><span id="result-count" class="muted">—</span></div><p id="result-context" class="muted">Only completed, approved projections appear here.</p><ol id="event-list" class="event-list"></ol><div id="empty-result" class="empty-state"><span aria-hidden="true">◇</span><h3>No result evidence yet</h3><p>Loading is not a successful execution.</p></div></section>
+          <section id="trail" class="trail-section" aria-labelledby="trail-heading"><div class="section-heading"><div><p class="eyebrow">ENFORCEMENT EVIDENCE</p><h2 id="trail-heading">Execution trail</h2></div><span id="trail-count" class="muted">—</span></div><div class="boundary" aria-label="Trust boundary"><span>Agent</span><span aria-hidden="true">→</span><strong>MissionGuard</strong><span aria-hidden="true">→</span><span>Synthetic API</span><span class="boundary-note">Credentials never enter the agent</span></div><div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable execution evidence"><table><caption class="visually-hidden">Sanitized execution evidence; counters are cumulative reservations, not dispatch totals.</caption><thead><tr><th scope="col">Time · PDT</th><th scope="col">Operation</th><th scope="col">Decision / event</th><th scope="col">Reason</th><th scope="col">Calls reserved</th></tr></thead><tbody id="trail-body"></tbody></table></div><p class="table-note">Denied = no new adapter dispatch for that request. Pending / unknown may have been sent. No automatic retry.</p></section>
+          <p id="decision-key" class="table-note"><strong>Allow</strong> · recorded completion. <strong>Block</strong> · denied request, no new dispatch. <strong>Review</strong> · human policy review only; not a runtime decision or generic approval endpoint.</p>
+        </div>
+        <aside class="inspector" aria-label="Mission scope and runtime budgets">
+          <section class="budget-section" aria-labelledby="budget-heading"><p class="eyebrow">DURABLE RESERVATIONS</p><h2 id="budget-heading">Runtime budget</h2><div class="budget-number"><span>Calls reserved</span><strong id="calls-value">—</strong></div><progress id="calls-progress" max="1" value="0" aria-label="Calls reserved"></progress><div class="budget-number"><span>Rows reserved</span><strong id="rows-value">—</strong></div><progress id="rows-progress" max="1" value="0" aria-label="Rows reserved"></progress><p class="fine-print">Reservations are never refunded. Small results, timeouts and crashes still consume the reserved budget.</p><dl class="budget-meta"><div><dt>Policy expiry</dt><dd id="expiry">—</dd></div><div><dt>Snapshot source</dt><dd id="source-label">Unknown</dd></div><div><dt>Identity</dt><dd>Server-bound only</dd></div></dl></section>
+          <section id="scope" aria-labelledby="scope-heading"><div class="section-heading"><h2 id="scope-heading">Approved scope</h2><span class="small-badge">Read only</span></div><ul id="grant-list" class="grant-list"></ul><details><summary>Approval boundary</summary><p>Only a trusted server-side human principal can approve or revoke. A hash is a reference, not authority. New policy requires a new mission.</p><button type="button" disabled>Approve on server — unavailable</button></details><p class="fine-print">Only the fixed human-confirmed Run above can create the fixed hosted synthetic demo. This receipt view cannot grant arbitrary policy, revoke, refresh analyses or reset an existing budget.</p></section>
+          <section id="limitations" aria-labelledby="limitations-heading"><p class="eyebrow">EXPLICIT UNKNOWNS</p><h2 id="limitations-heading">Integration gates</h2><ul class="integration-list"><li><span>EventMatch live</span><strong>Not verified</strong></li><li><span>Guild fresh Run</span><strong>Unavailable</strong></li><li><span>Akash Network</span><strong>Running · synthetic API</strong></li><li><span>ClickHouse</span><strong>3-row cloud probe</strong></li><li><span>Semgrep scan</span><strong>Offline scan completed</strong></li></ul><p id="scan-scope" class="fine-print">Historical local scan: 41 selected files, 5 raw matches, 0 reported errors. Current Run controller is not covered. No Guardian or cloud scan.</p><details><summary>Receipt limitations</summary><ul id="limitation-list"></ul></details><p class="fine-print">Analytics cannot grant permissions. No quarantine path is claimed by this baseline.</p></section>
+        </aside>
+      </div>
+      <footer><span>MissionGuard <span class="muted">/ Mission-scoped, read-only evidence</span></span><span>Fictional data · Core enforcement · no model calls</span></footer>
+    </main>
+  </div>
+  <noscript><p class="noscript">JavaScript is required to display the local fixture. No execution or approval is available.</p></noscript>
+</body>
+</html>
